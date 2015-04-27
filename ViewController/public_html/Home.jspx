@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:messages id="m1"/>
+      <af:form id="f1">
+        <af:panelSplitter id="ps1" splitterPosition="250">
+          <f:facet name="first">
+            <af:panelGroupLayout id="pgl1" layout="vertical">
+              <af:commandButton text="javascript" id="cb1" action="javascript"/>
+              <af:commandButton text="profiling" id="commandButton1"
+                                action="prof"/>
+              <af:commandButton text="DynamicTabShell" immediate="true" id="cb2"
+                                action="dynamic"/>
+              <af:commandButton text="Immidiate" id="cb3" action="imidiate"/>
+              <af:commandButton text="callDeptTF" id="commandButton2"
+                                action="imidiate"/>
+            </af:panelGroupLayout>
+          </f:facet>
+          <f:facet name="second">
+            <af:panelGroupLayout layout="scroll"                               
+                                 id="pgl2">
+              <af:commandButton text="testLogging" id="cb4"
+                                action="#{AdfLoggerTest.LogTheMessage}"/>
+              <af:commandButton text="commandButton 2" id="cb5"/>
+            </af:panelGroupLayout>
+          </f:facet>
+        </af:panelSplitter>
+      </af:form>
+    </af:document>
+  </f:view>
+  <!--oracle-jdev-comment:preferred-managed-bean-name:AdfLoggerTest-->
+</jsp:root>

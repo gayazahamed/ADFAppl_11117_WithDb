@@ -1,0 +1,34 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<deployment-plan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://www.bea.com/ns/weblogic/deployment-plan http://www.bea.com/ns/weblogic/deployment-plan/1.0/deployment-plan.xsd"
+                 xmlns="http://www.bea.com/ns/weblogic/deployment-plan">
+    <application-name>ADFAppl11116_ViewController_webapp1</application-name>
+<variable-definition>
+    <variable>
+      <name>projectStageProduction</name>
+      <value>Production</value>
+    </variable>
+    <variable>
+      <name>devModeVersionDisplayOff</name>
+      <value>true</value>
+    </variable>
+  </variable-definition>
+  <module-override>
+    <module-name>ADFAppl11116_ViewController_webapp1.war</module-name>
+    <module-type>war</module-type>
+    <module-descriptor external="false">
+      <root-element>web-app</root-element>
+      <uri>WEB-INF/web.xml</uri>
+      <variable-assignment>
+        <name>projectStageProduction</name>
+        <xpath>/web-app/context-param/[param-name="javax.faces.STATE_SAVING_METHOD"]/param-value</xpath>
+        <operation>replace</operation>
+      </variable-assignment>
+      <variable-assignment>
+        <name>devModeVersionDisplayOff</name>
+        <xpath>/web-app/context-param/[param-name="oracle.adf.view.rich.versionString.HIDDEN"]/param-value</xpath>
+        <operation>replace</operation>
+      </variable-assignment>
+    </module-descriptor>
+  </module-override>
+</deployment-plan>

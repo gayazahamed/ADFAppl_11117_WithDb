@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="11.1.1.62.29" id="DataBindings" SeparateXMLFiles="false"
+             Package="view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/WEB-INF/url-task-flow-definition.xml#url-task-flow-definition@ExecuteWithParams"
+          usageId="view_url_task_flow_definition_url_task_flow_definition_ExecuteWithParamsPageDef"/>
+    <page path="/UrlParams.jspx" usageId="view_UrlParamsPageDef"/>
+    <page path="/profiling.jspx" usageId="view_profilingPageDef"/>
+    <page path="/Home.jspx" usageId="view_HomePageDef"/>
+    <page path="/DynamicTabShellEx.jspx"
+          usageId="view_DynamicTabShellExPageDef"/>
+    <page path="/Hr.jspx" usageId="view_HrPageDef"/>
+    <page path="/Immidiate.jspx" usageId="view_ImmidiatePageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+
+    <page id="view_url_task_flow_definition_url_task_flow_definition_ExecuteWithParamsPageDef"
+          path="view.pageDefs.url_task_flow_definition_url_task_flow_definition_ExecuteWithParamsPageDef"/>
+    <page id="view_UrlParamsPageDef" path="view.pageDefs.UrlParamsPageDef"/>
+    <page id="view_profilingPageDef" path="view.pageDefs.profilingPageDef"/>
+    <page id="view_HomePageDef" path="view.pageDefs.HomePageDef"/>
+    <page id="view_DynamicTabShellExPageDef"
+          path="view.pageDefs.DynamicTabShellExPageDef"/>
+    <page id="view_HrPageDef" path="view.pageDefs.HrPageDef"/>
+    <page id="view_ImmidiatePageDef" path="view.pageDefs.ImmidiatePageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleDataControl" Package="model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl"
+                     SupportsTransactions="true" SupportsFindMode="true"
+                     SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true"
+                     Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.62.29"
+                id="url_task_flow_definition_url_task_flow_definition_ExecuteWithParamsPageDef"
+                Package="view.pageDefs" SkipValidation="true">
+  <parameters/>
+  <executables>
+    <iterator Binds="URlDepartmentsView" RangeSize="25"
+              DataControl="AppModuleDataControl"
+              id="URlDepartmentsViewIterator" Refresh="never"/>
+  </executables>
+  <bindings>
+    <action IterBinding="URlDepartmentsViewIterator" id="ExecuteWithParams"
+            RequiresUpdateModel="true" Action="executeWithParams">
+      <NamedData NDName="bindDept" NDValue="#{pageFlowScope.deptid}"
+                 NDType="java.lang.String"/>
+    </action>
+  </bindings>
+</pageDefinition>

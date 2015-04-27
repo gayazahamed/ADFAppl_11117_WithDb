@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="Dept-flow-definition">
+    <default-activity id="__1">dept</default-activity>
+    <managed-bean id="__5">
+      <managed-bean-name id="__3">ExcpetionHandleBean</managed-bean-name>
+      <managed-bean-class id="__4">ExcpetionHandleBe</managed-bean-class>
+      <managed-bean-scope id="__6">backingBean</managed-bean-scope>
+    </managed-bean>
+    <exception-handler id="__7">methodCall1</exception-handler>
+    <view id="dept">
+      <page>/deptView.jsff</page>
+    </view>
+    <method-call id="methodCall1">
+      <method>#{backingBeanScope.ExcpetionHandleBean.handleExceptionShowMessageInPopupDialog}</method>
+    </method-call>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>
