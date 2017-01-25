@@ -70,6 +70,7 @@
          <string v="Java"/>
       </list>
    </hash>
+   <value n="oracle.jbo.extends.viewObj" v="model.custom.CustomViewObjectImpl"/>
    <value n="oracle.jbo.SavedPreferences" v="true"/>
    <hash n="oracle.jdeveloper.compiler.OjcConfiguration">
       <list n="copyRes">
@@ -92,6 +93,7 @@
          <string v=".xsl"/>
          <string v=".xsd"/>
          <string v=".jpx"/>
+         <string v=".rpx"/>
       </list>
       <value n="internalEncoding" v="Cp1252"/>
       <list n="Javac.commandline.optionlist">

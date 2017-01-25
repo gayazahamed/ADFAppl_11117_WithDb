@@ -17,6 +17,10 @@
           usageId="view_DynamicTabShellExPageDef"/>
     <page path="/Hr.jspx" usageId="view_HrPageDef"/>
     <page path="/Immidiate.jspx" usageId="view_ImmidiatePageDef"/>
+    <page path="/WEB-INF/Iterator-Bindings-Test.xml#Iterator-Bindings-Test@defaultMethod"
+          usageId="view_Iterator_Bindings_Test_Iterator_Bindings_Test_defaultMethodPageDef"/>
+    <page path="/iteratorBindTest/iteratorBindTest.jspx" usageId="view_iteratorBindTestPageDef"/>
+    <page path="/iteratorBindTest/IteratorBindTestIndividual.jspx" usageId="view_IteratorBindTestIndividualPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
 
@@ -29,6 +33,10 @@
           path="view.pageDefs.DynamicTabShellExPageDef"/>
     <page id="view_HrPageDef" path="view.pageDefs.HrPageDef"/>
     <page id="view_ImmidiatePageDef" path="view.pageDefs.ImmidiatePageDef"/>
+    <page id="view_Iterator_Bindings_Test_Iterator_Bindings_Test_defaultMethodPageDef"
+          path="view.pageDefs.Iterator_Bindings_Test_Iterator_Bindings_Test_defaultMethodPageDef"/>
+    <page id="view_iteratorBindTestPageDef" path="iteratorBindTest.iteratorBindTestPageDef"/>
+    <page id="view_IteratorBindTestIndividualPageDef" path="iteratorBindTest.IteratorBindTestIndividualPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model"

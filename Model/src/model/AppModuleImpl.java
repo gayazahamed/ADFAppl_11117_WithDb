@@ -1,5 +1,7 @@
 package model;
 
+import model.common.AppModule;
+
 import oracle.jbo.server.ApplicationModuleImpl;
 import oracle.jbo.server.ViewLinkImpl;
 import oracle.jbo.server.ViewObjectImpl;
@@ -9,7 +11,7 @@ import oracle.jbo.server.ViewObjectImpl;
 // ---    Custom code may be added to this class.
 // ---    Warning: Do not modify method signatures of generated methods.
 // ---------------------------------------------------------------------
-public class AppModuleImpl extends ApplicationModuleImpl {
+public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
     /**
      * This is the default constructor (do not remove).
      */
@@ -95,5 +97,13 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      */
     public ViewObjectImpl getEmployeesViewCascade1() {
         return (ViewObjectImpl)findViewObject("EmployeesViewCascade1");
+    }
+    
+    
+    
+    
+    public void execureEmpQuery(String empid){
+        System.out.println("//////////////////");
+        this.getEmployeesView1().executeQuery();
     }
 }

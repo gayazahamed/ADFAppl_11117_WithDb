@@ -1,3 +1,9 @@
 DB 
 
 ORCL/XE
+
+
+
+Iterator execution in bindings 
+Iterator-Bindings-Test.xml
+IterBindTestIteratorBindTestIndividual.jspx

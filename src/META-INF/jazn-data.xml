@@ -12,4 +12,13 @@
       </users>
     </realm>
   </jazn-realm>
+  <policy-store>
+    <applications>
+      <application>
+        <name>ADFAppl_11117_WithDb</name>
+        <permission-sets>
+        </permission-sets>
+      </application>
+    </applications>
+  </policy-store>
 </jazn-data>
